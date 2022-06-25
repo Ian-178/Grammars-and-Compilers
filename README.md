@@ -14,6 +14,14 @@ gcc (в моём случае gcc (MinGW.org GCC-6.3.0-1) 6.3.0)
 
 
 
+
+
+
+
+
+
+
+
 This is a repository for projects on Grammars and Compilers. As projects in the repository there are:
 1. A simple syntactic and lexical analyzer of polynomials from one variable. Performs simplification of the provided polynomial
 2. Improved polynomial analyzer. Different variables (x, y, z, etc.). Variables that can be assigned polynomials or other variables ($a = x^2+1). A detailed description of the conflicts and errors that arise: lexical, syntactic, semantic. The last type of error is the area of operations that are incorrect from the point of view of mathematics (for example, the conversion of zero to zero, etc.)
