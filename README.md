@@ -11,17 +11,17 @@ Win64;
 make (gnuwin32) либо другой make на выбор;
 Bison & Flex for Win (в моём случае: bison (GNU Bison) 2.7, flex.exe 2.6.4);
 gcc (в моём случае gcc (MinGW.org GCC-6.3.0-1) 6.3.0)
-
-
-
-
-
-
-
-
-
-
-
+  \
+  \
+  \
+  \
+  \
+  \
+  \
+  \
+  \
+  \
+  \
 This is a repository for projects on Grammars and Compilers. As projects in the repository there are:
 1. A simple syntactic and lexical analyzer of polynomials from one variable. Performs simplification of the provided polynomial
 2. Improved polynomial analyzer. Different variables (x, y, z, etc.). Variables that can be assigned polynomials or other variables ($a = x^2+1). A detailed description of the conflicts and errors that arise: lexical, syntactic, semantic. The last type of error is the area of operations that are incorrect from the point of view of mathematics (for example, the conversion of zero to zero, etc.)
@@ -33,14 +33,15 @@ Win64;
 make (gnuwin32) or another make to choose from;
 Bison & Flex for Win (in my case: bison (GNU Bison) 2.7, flex.exe 2.6.4);
 gcc (in my case gcc (MinGW.org GCC-6.3.0-1) 6.3.0)
-
-
-
-
-
-
-
-
-
-
-
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
