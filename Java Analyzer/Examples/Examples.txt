@@ -1,0 +1,414 @@
+Символ		Имя													Описание
+{}			Открывающая и закрывающая фигурная скобка			Обозначает блок для окружения инструкций.
+()			Открывающая и закрывающая круглая скобка			Используется с методами.
+[]			Открывающая и закрывающая квадратная скобка			Обозначает массив.
+//			Двойной слэш										Предшествует комментарию.
+" "			Открывающая и закрывающая кавычки					Окружает строку (т.е. последовательность символов).
+;			Точка с запятой										Обозначает конец инструкции.
+
+
+
+import java.util.Date;
+import java.io.*;
+import пакет1 [.пакет2].(имя_класса | *);
+
+
+///----------------------------------------------------------------------------------------
+///----------------------------------------------------------------------------------------
+
+
+public class Welcome
+{
+    public static void main(String[] args)
+    {
+        // Показать в консоли сообщение Welcome to Java!
+        System.out.println("Welcome to Java!");
+    }
+}
+
+public class WelcomeWithThreeMessages
+{
+ 
+    public static void main(String[] args)
+    {
+        System.out.println("Программировать весело!");
+        System.out.println("Сначала основы");
+        System.out.println("Problem Driven");
+    }
+}
+
+public class ComputeExpression
+{
+ 
+    public static void main(String[] args)
+    {
+        System.out.println((10.5 + 2 * 3) / (45 - 3.5));
+    }
+}
+
+
+public class Test
+{
+ 
+    public static void main(String[] args)
+    {
+        System.out.println("3.5 * 4 / 2 – 2.5 равно ");
+        System.out.println(3.5 * 4 / 2 - 2.5);
+    }
+}
+
+
+///----------------------------------------------------------------------------------------
+///----------------------------------------------------------------------------------------
+
+package com.journaldev.javaprograms;
+
+public class JavaReverseString
+{
+
+	public static void main(String[] args)
+	{
+		System.out.println(reverseString("abc"));
+		System.out.println(reverseString("123!@#098*"));
+	}
+
+	public static String reverseString(String in)
+	{
+		if (in == null)
+			return null;
+		StringBuilder out = new StringBuilder();
+
+		int length = in.length();
+
+		for (int i = length - 1; i >= 0; i--)
+		{
+			out.append(in.charAt(i));
+		}
+
+		return out.toString();
+	}
+}
+
+
+
+package com.journaldev.javaprograms;
+
+public class FibonacciSeries
+{
+
+	public static void main(String[] args)
+	{
+		printFibonacciSeries(10);
+	}
+
+	public static void printFibonacciSeries(int count)
+	{
+		int a = 0;
+		int b = 1;
+		int c = 1;
+		for (int i = 1; i <= count; i++)
+		{
+			System.out.print(a + ", ");
+			a = b;
+			b = c;
+			c = a + b;
+		}
+
+	}
+}
+
+
+package com.journaldev.javaprograms;
+
+import java.util.Scanner;
+
+public class CheckPrimeNumber
+{
+
+	public static void main(String[] args)
+	{
+
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter number to check for prime:");
+		int n = s.nextInt();
+		s.close();
+		checkPrime(n);
+	}
+
+	private static void checkPrime(int n)
+	{
+		if (n == 0 || n == 1)
+		{
+			System.out.println(n + " is not a prime number");
+			return;
+		}
+		if (n == 2)
+		{
+			System.out.println(n + " is a prime number");
+		}
+		for (int i = 2; i <= n / 2; i++)
+		{
+			if (n % i == 0)
+			{
+				System.out.println(n + " is not a prime number");
+				return;
+			}
+		}
+		System.out.println(n + " is a prime number");
+	}
+
+}
+
+
+package com.journaldev.javaprograms;
+
+import java.util.Scanner;
+
+public class PalindromeString
+{
+
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter String to check for Palindrome:");
+		String str = s.next();
+		s.close();
+
+		checkPalindrome(str);
+	}
+
+	private static void checkPalindrome(String str)
+	{
+		char[] charArray = str.toCharArray();
+		StringBuilder sb = new StringBuilder();
+		for (int i = charArray.length - 1; i >= 0; i--)
+		{
+			sb.append(charArray[i]);
+		}
+		if (sb.toString().equalsIgnoreCase(str))
+			System.out.println(str + " is palindrome.");
+		else
+			System.out.println(str + " is not palindrome");
+	}
+
+}
+
+
+
+
+
+
+package com.journaldev.javaprograms;
+
+import java.util.Scanner;
+
+public class PalindromeString {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter String to check for Palindrome:");
+		String str = s.next();
+		s.close();
+
+		checkPalindrome(str);
+	}
+
+	private static void checkPalindrome(String str) {
+		char[] charArray = str.toCharArray();
+		StringBuilder sb = new StringBuilder();
+		for (int i = charArray.length - 1; i >= 0; i--) {
+			sb.append(charArray[i]);
+		}
+		if (sb.toString().equalsIgnoreCase(str))
+			System.out.println(str + " is palindrome.");
+		else
+			System.out.println(str + " is not palindrome");
+	}
+
+}
+
+
+
+
+
+
+
+package com.journaldev.javaprograms;
+
+import java.util.Arrays;
+
+public class JavaArraySort {
+
+	public static void main(String[] args) {
+		int[] array = {2,1,5,3,4,6,7};
+		
+		int[] sortedArray = bubbleSortAscending(array);
+		
+		System.out.println(Arrays.toString(sortedArray));
+	}
+
+	public static int[] bubbleSortAscending(int[] arr){
+        int temp;
+        for(int i=0; i < arr.length-1; i++){
+             
+            for(int j=1; j < arr.length-i; j++){
+                if(arr[j-1] > arr[j]){
+                    temp=arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            //check that last index has highest value in first loop,
+            // second last index has second last highest value and so on
+            System.out.println("Array after "+(i+1)+"th iteration:"+Arrays.toString(arr));
+        }
+        return arr;
+    }
+}
+
+
+
+
+
+
+package com.journaldev.javaprograms;
+
+import java.util.Scanner;
+
+public class ReadStringAndConcat {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter number of Strings to Concatenate:");
+		int n = scanner.nextInt();
+		
+		String[] input = new String[n];
+		for(int i=0; iУдаление нечетных чисел из массива целых чисел package com.journaldev.javaprograms;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+public class RemoveOddNumbers {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter comma separated numbers for input int array, for example '1,2,3,4'");
+		String input = scanner.next();
+		scanner.close();
+		//convert to int array
+		String[] inArray = input.split(",");
+		int [] intArray = new int[inArray.length];
+		int index = 0;
+		for(String s : inArray) {
+			intArray[index] = Integer.parseInt(s.trim());
+			index++;
+		}
+		//call a function to remove odd numbers
+		Integer[] result = removeOddNumbers(intArray);
+		
+		System.out.println(Arrays.toString(result));
+	}
+
+	private static Integer[] removeOddNumbers(int[] intArray) {
+		//we will have to use list because we don't know exact size of the result array
+		List list = new ArrayList<>();
+		for(int i : intArray) {
+			if(i%2 == 0) list.add(i);
+		}
+		
+		return list.toArray(new Integer[list.size()]);
+	}
+
+}
+ Если вы читаете этот код, вы должны убедиться, что он соответствует всем пунктам, упомянутым выше. Попробуйте написать чистый и простой код, следуйте рекомендациям, соглашениям об именах методов и переменных, и у вас все получится. Удалите все совпадающие элементы из списка package com.journaldev.javaprograms;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class DeleteFromList {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter comma separated list of Strings. For example 'a,b,c,b,a'");
+		String input = scanner.next();
+		System.out.println("Enter String to remove from the input list.");
+		String strToDelete = scanner.next();
+		scanner.close();
+
+		List inputList = new ArrayList<>();
+		String[] inputStrings = input.split(",");
+		for (String s : inputStrings)
+			inputList.add(s.trim());
+		
+		inputList = removeAll(inputList, strToDelete);
+		System.out.println("Result List = "+inputList);
+	}
+
+	private static List removeAll(List inputList, Object objToDelete) {
+		Iterator it = inputList.iterator();
+		while(it.hasNext()) {
+			Object obj = it.next();
+			if(obj.equals(objToDelete)) it.remove();
+		}
+		return inputList;
+	}
+
+}
+ Обратите внимание, что метод удаления создан для списка объектов, поэтому он будет работать с любым типом списка. Вот как мы пишем повторно используемый код. Использование итератора для удаления элемента из списка. Обрезка входных данных для удаления любых случайных пробелов из входных строк. Среднее значение чисел с округлением наполовину и масштабом 2 package com.journaldev.javaprograms;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Scanner;
+
+public class AverageOfNumbers {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please enter the total number of integers.");
+		int count = scanner.nextInt();
+
+		int sum = 0;
+
+		for (int i = 0; i < count; i++) {
+			System.out.println("Please enter number " + (i + 1) + ":");
+			sum += scanner.nextInt();
+		}
+		System.out.println("Sum=" + sum + ",Count=" + count);
+
+		BigDecimal average = new BigDecimal((double) sum / count);
+		average = average.setScale(2, RoundingMode.HALF_UP);
+		System.out.println("Average of entered numbers = " + average);
+		scanner.close();
+	}
+
+}
+ Замена двух чисел package com.journaldev.javaprograms;
+
+import java.util.Scanner;
+
+public class SwappingNumbers {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter the first number:");
+		int first = scanner.nextInt();
+		System.out.println("Enter the second number:");
+		int second = scanner.nextInt();
+		scanner.close();
+
+		System.out.println("Initial value of numbers are: "+first+" and "+second);
+		
+		first = first + second;
+		second = first -second;
+		first = first - second;
+		
+		System.out.println("Value of numbers after swapping are: "+first+" and "+second);
+
+	}
+
+}
